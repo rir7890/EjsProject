@@ -1,0 +1,25 @@
+<%- include('layout/header') %>
+<main>
+  <!-- <h1>Home Page</h1> -->
+  <form action="/" method="post">
+    <input
+      type="text"
+      placeholder="Enter a programming language to Add"
+      name="plName"
+      required
+    />
+    <button type="submit">Add Data</button>
+  </form>
+  <ul>
+    <% if ( plNames.length>0 ) { %>
+    <!-- <li><%#plNames[0] %></li>
+        <li><%#plNames[1] %></li> -->
+    <% for ( let x of plNames ) { %>
+    <li><%= x %></li>
+    <% } %> <% } else { %>
+    <p>No Data available</p>
+    <% } %>
+  </ul>
+</main>
+
+<%- include('layout/footer') %>
